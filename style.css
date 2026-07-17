@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+  background:
+    radial-gradient(circle at top left, #ffe0e8, transparent 40%),
+    radial-gradient(circle at bottom right, #f8c8dc, transparent 45%),
+    #fff5f8;
+
+  color: #472936;
+}
+
+.invitation {
+  width: min(100%, 560px);
+  padding: 40px 28px;
+
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(182, 81, 116, 0.18);
+  border-radius: 28px;
+
+  box-shadow: 0 20px 60px rgba(109, 44, 67, 0.16);
+}
+
+.secret-code {
+  margin: 0 0 24px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #b65174;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(30px, 7vw, 48px);
+}
+
+p {
+  line-height: 1.6;
+}
+
+button {
+  min-height: 52px;
+  margin-top: 18px;
+  padding: 14px 24px;
+
+  border: 0;
+  border-radius: 999px;
+
+  font: inherit;
+  font-weight: 700;
+
+  color: white;
+  background: #c9507b;
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(164, 55, 94, 0.3);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  .invitation {
+    padding: 32px 20px;
+    border-radius: 22px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
