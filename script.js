@@ -16,6 +16,8 @@ const invitationData = {
   preferences: [],
 }
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzdnelep"
+
 const openInvitationButton =
   document.querySelector("#openInvitation")
 
@@ -74,6 +76,8 @@ const summaryPreferences =
   document.querySelector("#summaryPreferences")
 const summaryMessage =
   document.querySelector("#summaryMessage")
+const submissionError =
+  document.querySelector("#submissionError") 
 
 const countdownElements = {
   days: document.querySelector("#days"),
@@ -377,6 +381,43 @@ function prepareSummary() {
     "Reszta pozostaje tajemnicą 🤫"
 }
 
+async function submitInvitation() {
+  const readyTime = subtractThirtyMinutes(
+    invitationData.departureTime,
+  )
+
+  const submissionData = {
+    wydarzenie: "Randka – 19 lipca 2026",
+    odpowiedz: "Tak",
+    godzina_wyjazdu: invitationData.departureTime,
+    rozpoczecie_przygotowan: readyTime,
+    styl:
+      getOutfitLabel(invitationData.outfitStyle),
+    instrukcja_ubioru:
+      invitationData.outfitInstructions ||
+      "Brak dodatkowej instrukcji",
+    oczekiwania:
+      invitationData.preferences.join(", "),
+    data_wyslania:
+      new Date().toLocaleString("pl-PL"),
+  }
+
+  const response = await fetch(FORMSPREE_ENDPOINT, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(submissionData),
+  })
+
+  if (!response.ok) {
+    throw new Error(
+      "Nie udało się wysłać odpowiedzi.",
+    )
+  }
+}
+
 function resetInvitation() {
   invitationData.departureTime = ""
   invitationData.outfitStyle = ""
@@ -582,10 +623,35 @@ document
     })
   })
 
-confirmDateButton.addEventListener("click", () => {
-  createConfetti(70)
-  showScreen("final")
-})
+confirmDateButton.addEventListener(
+  "click",
+  async () => {
+    submissionError.textContent = ""
+
+    const originalButtonContent =
+      confirmDateButton.innerHTML
+
+    confirmDateButton.disabled = true
+    confirmDateButton.innerHTML =
+      "Wysyłanie odpowiedzi…"
+
+    try {
+      await submitInvitation()
+
+      createConfetti(70)
+      showScreen("final")
+    } catch (error) {
+      console.error(error)
+
+      submissionError.textContent =
+        "Nie udało się zapisać odpowiedzi. Sprawdź internet i spróbuj ponownie."
+
+      confirmDateButton.disabled = false
+      confirmDateButton.innerHTML =
+        originalButtonContent
+    }
+  },
+)
 
 restartButton.addEventListener("click", () => {
   resetInvitation()
