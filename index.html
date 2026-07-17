@@ -7,25 +7,191 @@
       content="width=device-width, initial-scale=1.0"
     />
 
+    <meta
+      name="description"
+      content="Specjalne zaproszenie na niedzielną randkę"
+    />
+
     <title>Zaproszenie na randkę 💌</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <main class="invitation">
-      <p class="secret-code">Operacja: Niedzielna Randka</p>
+    <div class="floating-decorations" aria-hidden="true">
+      <span class="floating-heart heart-1">♥</span>
+      <span class="floating-heart heart-2">♥</span>
+      <span class="floating-heart heart-3">♥</span>
+      <span class="floating-heart heart-4">♥</span>
+      <span class="floating-heart heart-5">♥</span>
+      <span class="floating-flower flower-1">🌸</span>
+      <span class="floating-flower flower-2">🌷</span>
+      <span class="floating-flower flower-3">🌼</span>
+    </div>
 
-      <h1>Mam dla Ciebie małe zaproszenie 💌</h1>
+    <main class="page-wrapper">
+      <section class="invitation-card">
+        <header class="card-header">
+          <div class="mission-code">
+            <span class="mission-dot"></span>
+            Operacja: Niedzielna Randka
+          </div>
 
-      <p>
-        Niedługo pojawi się tutaj coś specjalnego.
-      </p>
+          <div class="progress-wrapper">
+            <div class="progress-info">
+              <span id="progressLabel">Krok 1 z 5</span>
+              <span id="progressPercent">20%</span>
+            </div>
 
-      <button type="button" id="openInvitation">
-        Otwórz zaproszenie
-      </button>
+            <div
+              class="progress-track"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="20"
+            >
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="screens">
+          <section class="screen active" id="welcomeScreen">
+            <div class="main-illustration">
+              <div class="illustration-glow"></div>
+              <div class="envelope">
+                <div class="envelope-back"></div>
+                <div class="letter">
+                  <span>💌</span>
+                </div>
+                <div class="envelope-front"></div>
+              </div>
+            </div>
+
+            <p class="eyebrow">Tylko dla Ciebie</p>
+
+            <h1>Mam dla Ciebie małe zaproszenie</h1>
+
+            <p class="description">
+              Przygotowałem coś specjalnego na najbliższą niedzielę.
+              Musisz tylko odpowiedzieć na kilka bardzo ważnych pytań.
+            </p>
+
+            <div class="countdown-section">
+              <p class="countdown-title">Do naszej randki zostało</p>
+
+              <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                  <span class="countdown-number" id="days">00</span>
+                  <span class="countdown-label">dni</span>
+                </div>
+
+                <div class="countdown-separator">:</div>
+
+                <div class="countdown-item">
+                  <span class="countdown-number" id="hours">00</span>
+                  <span class="countdown-label">godzin</span>
+                </div>
+
+                <div class="countdown-separator">:</div>
+
+                <div class="countdown-item">
+                  <span class="countdown-number" id="minutes">00</span>
+                  <span class="countdown-label">minut</span>
+                </div>
+
+                <div class="countdown-separator seconds-separator">:</div>
+
+                <div class="countdown-item seconds-item">
+                  <span class="countdown-number" id="seconds">00</span>
+                  <span class="countdown-label">sekund</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="primary-button" id="openInvitation">
+              Otwórz zaproszenie
+              <span aria-hidden="true">💌</span>
+            </button>
+          </section>
+
+          <section class="screen" id="questionScreen">
+            <div class="question-decoration">
+              <span class="large-heart">♥</span>
+              <span class="small-heart small-heart-left">♥</span>
+              <span class="small-heart small-heart-right">♥</span>
+            </div>
+
+            <p class="eyebrow">Najważniejsze pytanie</p>
+
+            <h2>Czy chciałabyś pójść ze mną w niedzielę na randkę?</h2>
+
+            <p class="description">
+              Niedziela, 19 lipca 2026 roku. Szczegóły pozostają na razie
+              tajemnicą.
+            </p>
+
+            <div class="answer-area" id="answerArea">
+              <button class="primary-button answer-button" id="yesButton">
+                Tak, oczywiście
+                <span aria-hidden="true">💕</span>
+              </button>
+
+              <button class="secondary-button answer-button" id="noButton">
+                Nie
+              </button>
+            </div>
+
+            <p class="no-button-hint" id="noButtonHint" aria-live="polite"></p>
+          </section>
+
+          <section class="screen" id="successScreen">
+            <div class="success-icon">
+              <span>💖</span>
+            </div>
+
+            <p class="eyebrow">Odpowiedź zapisana</p>
+
+            <h2>Wow, wybrałaś „Tak”?</h2>
+
+            <p class="description success-description">
+              Nie spodziewałem się 😅
+            </p>
+
+            <p class="description">
+              W takim razie musimy ustalić jeszcze kilka niezwykle ważnych
+              szczegółów.
+            </p>
+
+            <button class="primary-button" id="continueButton">
+              Kontynuuj
+              <span aria-hidden="true">→</span>
+            </button>
+          </section>
+
+          <section class="screen" id="placeholderScreen">
+            <div class="success-icon smaller">
+              <span>🕒</span>
+            </div>
+
+            <p class="eyebrow">Kolejny etap</p>
+
+            <h2>Teraz ustalimy godzinę wyjazdu</h2>
+
+            <p class="description">
+              Formularz wyboru godziny dodamy w następnym kroku.
+            </p>
+          </section>
+        </div>
+
+        <footer class="card-footer">
+          <span>Kod misji:</span>
+          <strong>LOVE-1907</strong>
+        </footer>
+      </section>
     </main>
+
+    <div class="confetti-container" id="confettiContainer"></div>
 
     <script src="script.js"></script>
   </body>
