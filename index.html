@@ -1,198 +1,518 @@
 <!doctype html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
 
-    <meta
-      name="description"
-      content="Specjalne zaproszenie na niedzielną randkę"
-    />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Specjalne zaproszenie na niedzielną randkę" />
 
     <title>Zaproszenie na randkę 💌</title>
 
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="floating-decorations" aria-hidden="true">
-      <span class="floating-heart heart-1">♥</span>
-      <span class="floating-heart heart-2">♥</span>
-      <span class="floating-heart heart-3">♥</span>
-      <span class="floating-heart heart-4">♥</span>
-      <span class="floating-heart heart-5">♥</span>
-      <span class="floating-flower flower-1">🌸</span>
-      <span class="floating-flower flower-2">🌷</span>
-      <span class="floating-flower flower-3">🌼</span>
+        <span class="floating-heart heart-1">♥</span>
+        <span class="floating-heart heart-2">♥</span>
+        <span class="floating-heart heart-3">♥</span>
+        <span class="floating-heart heart-4">♥</span>
+        <span class="floating-heart heart-5">♥</span>
+        <span class="floating-flower flower-1">🌸</span>
+        <span class="floating-flower flower-2">🌷</span>
+        <span class="floating-flower flower-3">🌼</span>
     </div>
 
     <main class="page-wrapper">
-      <section class="invitation-card">
-        <header class="card-header">
-          <div class="mission-code">
-            <span class="mission-dot"></span>
-            Operacja: Niedzielna Randka
-          </div>
-
-          <div class="progress-wrapper">
-            <div class="progress-info">
-              <span id="progressLabel">Krok 1 z 5</span>
-              <span id="progressPercent">20%</span>
-            </div>
-
-            <div
-              class="progress-track"
-              role="progressbar"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              aria-valuenow="20"
-            >
-              <div class="progress-bar" id="progressBar"></div>
-            </div>
-          </div>
-        </header>
-
-        <div class="screens">
-          <section class="screen active" id="welcomeScreen">
-            <div class="main-illustration">
-              <div class="illustration-glow"></div>
-              <div class="envelope">
-                <div class="envelope-back"></div>
-                <div class="letter">
-                  <span>💌</span>
-                </div>
-                <div class="envelope-front"></div>
-              </div>
-            </div>
-
-            <p class="eyebrow">Tylko dla Ciebie</p>
-
-            <h1>Mam dla Ciebie małe zaproszenie</h1>
-
-            <p class="description">
-              Przygotowałem coś specjalnego na najbliższą niedzielę.
-              Musisz tylko odpowiedzieć na kilka bardzo ważnych pytań.
-            </p>
-
-            <div class="countdown-section">
-              <p class="countdown-title">Do naszej randki zostało</p>
-
-              <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                  <span class="countdown-number" id="days">00</span>
-                  <span class="countdown-label">dni</span>
+        <section class="invitation-card">
+            <header class="card-header">
+                <div class="mission-code">
+                    <span class="mission-dot"></span>
+                    Operacja: Niedzielna Randka
                 </div>
 
-                <div class="countdown-separator">:</div>
+                <div class="progress-wrapper">
+                    <div class="progress-info">
+                        <span id="progressLabel">Krok 1 z 8</span>
+                        <span id="progressPercent">13%</span>
+                    </div>
 
-                <div class="countdown-item">
-                  <span class="countdown-number" id="hours">00</span>
-                  <span class="countdown-label">godzin</span>
+                    <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        aria-valuenow="13">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
                 </div>
+            </header>
 
-                <div class="countdown-separator">:</div>
+            <div class="screens">
+                <section class="screen active" id="welcomeScreen">
+                    <div class="main-illustration">
+                        <div class="illustration-glow"></div>
+                        <div class="envelope">
+                            <div class="envelope-back"></div>
+                            <div class="letter">
+                                <span>💌</span>
+                            </div>
+                            <div class="envelope-front"></div>
+                        </div>
+                    </div>
 
-                <div class="countdown-item">
-                  <span class="countdown-number" id="minutes">00</span>
-                  <span class="countdown-label">minut</span>
-                </div>
+                    <p class="eyebrow">Tylko dla Ciebie</p>
 
-                <div class="countdown-separator seconds-separator">:</div>
+                    <h1>Mam dla Ciebie małe zaproszenie</h1>
 
-                <div class="countdown-item seconds-item">
-                  <span class="countdown-number" id="seconds">00</span>
-                  <span class="countdown-label">sekund</span>
-                </div>
-              </div>
+                    <p class="description">
+                        Przygotowałem coś specjalnego na najbliższą niedzielę.
+                        Musisz tylko odpowiedzieć na kilka bardzo ważnych pytań.
+                    </p>
+
+                    <div class="countdown-section">
+                        <p class="countdown-title">Do naszej randki zostało</p>
+
+                        <div class="countdown" id="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="days">00</span>
+                                <span class="countdown-label">dni</span>
+                            </div>
+
+                            <div class="countdown-separator">:</div>
+
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="hours">00</span>
+                                <span class="countdown-label">godzin</span>
+                            </div>
+
+                            <div class="countdown-separator">:</div>
+
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="minutes">00</span>
+                                <span class="countdown-label">minut</span>
+                            </div>
+
+                            <div class="countdown-separator seconds-separator">:</div>
+
+                            <div class="countdown-item seconds-item">
+                                <span class="countdown-number" id="seconds">00</span>
+                                <span class="countdown-label">sekund</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="primary-button" id="openInvitation">
+                        Otwórz zaproszenie
+                        <span aria-hidden="true">💌</span>
+                    </button>
+                </section>
+
+                <section class="screen" id="questionScreen">
+                    <div class="question-decoration">
+                        <span class="large-heart">♥</span>
+                        <span class="small-heart small-heart-left">♥</span>
+                        <span class="small-heart small-heart-right">♥</span>
+                    </div>
+
+                    <p class="eyebrow">Najważniejsze pytanie</p>
+
+                    <h2>Czy chciałabyś pójść ze mną w niedzielę na randkę?</h2>
+
+                    <p class="description">
+                        Niedziela, 19 lipca 2026 roku. Szczegóły pozostają na razie
+                        tajemnicą.
+                    </p>
+
+                    <div class="answer-area" id="answerArea">
+                        <button class="primary-button answer-button" id="yesButton">
+                            Tak, oczywiście
+                            <span aria-hidden="true">💕</span>
+                        </button>
+
+                        <button class="secondary-button answer-button" id="noButton">
+                            Nie
+                        </button>
+                    </div>
+
+                    <p class="no-button-hint" id="noButtonHint" aria-live="polite"></p>
+                </section>
+
+                <section class="screen" id="successScreen">
+                    <div class="success-icon">
+                        <span>💖</span>
+                    </div>
+
+                    <p class="eyebrow">Odpowiedź zapisana</p>
+
+                    <h2>Wow, wybrałaś „Tak”?</h2>
+
+                    <p class="description success-description">
+                        Nie spodziewałem się 😅
+                    </p>
+
+                    <p class="description">
+                        W takim razie musimy ustalić jeszcze kilka niezwykle ważnych
+                        szczegółów.
+                    </p>
+
+                    <button class="primary-button" id="continueButton">
+                        Kontynuuj
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </section>
+
+                <section class="screen" id="timeScreen">
+                    <div class="form-icon">
+                        <span>🕒</span>
+                    </div>
+
+                    <p class="eyebrow">Ustalamy szczegóły</p>
+
+                    <h2>O której chciałabyś wyruszyć?</h2>
+
+                    <p class="description">
+                        Tak, żebyśmy mogli spokojnie pojechać, zjeść razem obiad
+                        i nacieszyć się swoją bliskością 😊
+                    </p>
+
+                    <form class="invitation-form" id="timeForm">
+                        <fieldset class="form-fieldset">
+                            <legend>Wybierz godzinę wyjazdu</legend>
+
+                            <div class="choice-grid time-choice-grid">
+                                <label class="choice-card">
+                                    <input type="radio" name="departureTime" value="12:00" />
+                                    <span class="choice-card-content">
+                                        <strong>12:00</strong>
+                                        <small>Wcześniejszy start</small>
+                                    </span>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="radio" name="departureTime" value="13:00" />
+                                    <span class="choice-card-content">
+                                        <strong>13:00</strong>
+                                        <small>Spokojne południe</small>
+                                    </span>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="radio" name="departureTime" value="14:00" />
+                                    <span class="choice-card-content">
+                                        <strong>14:00</strong>
+                                        <small>Późniejszy obiad</small>
+                                    </span>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="radio" name="departureTime" value="15:00" />
+                                    <span class="choice-card-content">
+                                        <strong>15:00</strong>
+                                        <small>Bez pośpiechu</small>
+                                    </span>
+                                </label>
+
+                                <label class="choice-card full-width-choice">
+                                    <input type="radio" name="departureTime" value="custom" id="customTimeRadio" />
+                                    <span class="choice-card-content">
+                                        <strong>Inna godzina</strong>
+                                        <small>Wpiszę własną propozycję</small>
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="conditional-field hidden" id="customTimeField">
+                            <label for="customTime">
+                                Wpisz godzinę
+                            </label>
+
+                            <input type="time" id="customTime" name="customTime" min="09:00" max="20:00" />
+                        </div>
+
+                        <p class="form-error" id="timeError" aria-live="polite"></p>
+
+                        <div class="form-navigation">
+                            <button class="secondary-button navigation-button" type="button" data-back="success">
+                                ← Wróć
+                            </button>
+
+                            <button class="primary-button navigation-button" type="submit">
+                                Dalej
+                                <span aria-hidden="true">→</span>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="screen" id="outfitScreen">
+                    <div class="form-icon">
+                        <span>✨</span>
+                    </div>
+
+                    <p class="eyebrow">Klimat randki</p>
+
+                    <h2>Jak się ubieramy?</h2>
+
+                    <p class="description">
+                        Wybierz klimat, w którym będziemy czuć się najlepiej.
+                    </p>
+
+                    <form class="invitation-form" id="outfitForm">
+                        <fieldset class="form-fieldset">
+                            <legend>Wybierz styl</legend>
+
+                            <div class="choice-grid outfit-choice-grid">
+                                <label class="choice-card large-choice">
+                                    <input type="radio" name="outfitStyle" value="elegant" />
+
+                                    <span class="choice-card-content">
+                                        <span class="choice-emoji">✨</span>
+                                        <strong>Trochę bardziej elegancko</strong>
+                                        <small>
+                                            Ładnie, ale bez przesadnej oficjalności.
+                                        </small>
+                                    </span>
+                                </label>
+
+                                <label class="choice-card large-choice">
+                                    <input type="radio" name="outfitStyle" value="casual" />
+
+                                    <span class="choice-card-content">
+                                        <span class="choice-emoji">🌿</span>
+                                        <strong>Na luzie</strong>
+                                        <small>
+                                            Wygodnie i swobodnie.
+                                        </small>
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="conditional-field hidden" id="outfitInstructionsField">
+                            <label for="outfitInstructions">
+                                Wiesz, że w kwestii ubrań czasami potrzebuję pomocy…
+                                W co powinienem się ubrać? 😅
+                            </label>
+
+                            <textarea id="outfitInstructions" name="outfitInstructions" rows="4" maxlength="250"
+                                placeholder="Na przykład: koszula, ciemne spodnie i brązowe buty"></textarea>
+
+                            <span class="character-counter">
+                                <span id="outfitCharacters">0</span>/250
+                            </span>
+                        </div>
+
+                        <p class="form-error" id="outfitError" aria-live="polite"></p>
+
+                        <div class="form-navigation">
+                            <button class="secondary-button navigation-button" type="button" data-back="time">
+                                ← Wróć
+                            </button>
+
+                            <button class="primary-button navigation-button" type="submit">
+                                Dalej
+                                <span aria-hidden="true">→</span>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="screen" id="preferencesScreen">
+                    <div class="form-icon">
+                        <span>💭</span>
+                    </div>
+
+                    <p class="eyebrow">Ostatnie pytanie</p>
+
+                    <h2>Na co najbardziej masz ochotę?</h2>
+
+                    <p class="description">
+                        Możesz wybrać kilka odpowiedzi. Nie zdradzę jednak,
+                        które z nich już zaplanowałem.
+                    </p>
+
+                    <form class="invitation-form" id="preferencesForm">
+                        <fieldset class="form-fieldset">
+                            <legend>Wybierz co najmniej jedną odpowiedź</legend>
+
+                            <div class="choice-grid preference-choice-grid">
+                                <label class="choice-card">
+                                    <input type="checkbox" name="preferences" value="Dobrego jedzenia" />
+
+                                    <span class="choice-card-content">
+                                        <span class="choice-emoji">🍽️</span>
+                                        <strong>Dobrego jedzenia</strong>
+                                    </span>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="checkbox" name="preferences" value="Spokojnego czasu razem" />
+
+                                    <span class="choice-card-content">
+                                        <span class="choice-emoji">💕</span>
+                                        <strong>Spokojnego czasu razem</strong>
+                                    </span>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="checkbox" name="preferences" value="Małej niespodzianki" />
+
+                                    <span class="choice-card-content">
+                                        <span class="choice-emoji">🎁</span>
+                                        <strong>Małej niespodzianki</strong>
+                                    </span>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="checkbox" name="preferences" value="Romantycznego klimatu" />
+
+                                    <span class="choice-card-content">
+                                        <span class="choice-emoji">🌹</span>
+                                        <strong>Romantycznego klimatu</strong>
+                                    </span>
+                                </label>
+
+                                <label class="choice-card full-width-choice">
+                                    <input type="checkbox" name="preferences" value="Czegoś zabawnego" />
+
+                                    <span class="choice-card-content">
+                                        <span class="choice-emoji">😄</span>
+                                        <strong>Czegoś zabawnego</strong>
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <p class="form-error" id="preferencesError" aria-live="polite"></p>
+
+                        <div class="form-navigation">
+                            <button class="secondary-button navigation-button" type="button" data-back="outfit">
+                                ← Wróć
+                            </button>
+
+                            <button class="primary-button navigation-button" type="submit">
+                                Pokaż podsumowanie
+                                <span aria-hidden="true">💕</span>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="screen" id="summaryScreen">
+                    <div class="success-icon smaller">
+                        <span>💌</span>
+                    </div>
+
+                    <p class="eyebrow">Wszystko jasne</p>
+
+                    <h2>Plan naszej randki został ustalony</h2>
+
+                    <p class="description">
+                        Reszta pozostaje tajemnicą 🤫
+                    </p>
+
+                    <div class="summary-card">
+                        <div class="summary-row highlighted-summary">
+                            <div class="summary-symbol">💕</div>
+
+                            <div class="summary-content">
+                                <span>Zaczynamy przygotowania</span>
+                                <strong id="summaryReadyTime">--:--</strong>
+                            </div>
+                        </div>
+
+                        <div class="summary-row">
+                            <div class="summary-symbol">🚗</div>
+
+                            <div class="summary-content">
+                                <span>Godzina wyjazdu</span>
+                                <strong id="summaryDepartureTime">--:--</strong>
+                            </div>
+                        </div>
+
+                        <div class="summary-row">
+                            <div class="summary-symbol">✨</div>
+
+                            <div class="summary-content">
+                                <span>Styl</span>
+                                <strong id="summaryOutfit">—</strong>
+                            </div>
+                        </div>
+
+                        <div class="summary-row hidden" id="summaryInstructionsRow">
+                            <div class="summary-symbol">👔</div>
+
+                            <div class="summary-content">
+                                <span>Instrukcja dla mnie</span>
+                                <strong id="summaryInstructions">—</strong>
+                            </div>
+                        </div>
+
+                        <div class="summary-row">
+                            <div class="summary-symbol">💭</div>
+
+                            <div class="summary-content">
+                                <span>Najważniejsze elementy</span>
+                                <strong id="summaryPreferences">—</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="summary-message" id="summaryMessage">
+                        W niedzielę o 00:00 zaczynamy przygotowania,
+                        a o 00:00 ruszamy.
+                    </p>
+
+                    <div class="form-navigation summary-navigation">
+                        <button class="secondary-button navigation-button" type="button" data-back="preferences">
+                            ← Popraw odpowiedzi
+                        </button>
+
+                        <button class="primary-button navigation-button" type="button" id="confirmDateButton">
+                            Zatwierdzam naszą randkę
+                            <span aria-hidden="true">💍</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="screen" id="finalScreen">
+                    <div class="final-heart">
+                        <span>💖</span>
+                    </div>
+
+                    <p class="eyebrow">Misja przyjęta</p>
+
+                    <h2>Randka zarezerwowana</h2>
+
+                    <p class="description final-description">
+                        Dziękuję za dokonanie niezwykle trudnych wyborów.
+                        Organizator randki zajmie się całą resztą.
+                    </p>
+
+                    <div class="final-date">
+                        <span>Niedziela</span>
+                        <strong>19 lipca 2026</strong>
+                    </div>
+
+                    <p class="final-love-message">
+                        Do zobaczenia na naszej randce, moja przyszła żono 💕
+                    </p>
+
+                    <button class="primary-button" type="button" id="restartButton">
+                        Zobacz zaproszenie ponownie
+                    </button>
+                </section>
             </div>
 
-            <button class="primary-button" id="openInvitation">
-              Otwórz zaproszenie
-              <span aria-hidden="true">💌</span>
-            </button>
-          </section>
-
-          <section class="screen" id="questionScreen">
-            <div class="question-decoration">
-              <span class="large-heart">♥</span>
-              <span class="small-heart small-heart-left">♥</span>
-              <span class="small-heart small-heart-right">♥</span>
-            </div>
-
-            <p class="eyebrow">Najważniejsze pytanie</p>
-
-            <h2>Czy chciałabyś pójść ze mną w niedzielę na randkę?</h2>
-
-            <p class="description">
-              Niedziela, 19 lipca 2026 roku. Szczegóły pozostają na razie
-              tajemnicą.
-            </p>
-
-            <div class="answer-area" id="answerArea">
-              <button class="primary-button answer-button" id="yesButton">
-                Tak, oczywiście
-                <span aria-hidden="true">💕</span>
-              </button>
-
-              <button class="secondary-button answer-button" id="noButton">
-                Nie
-              </button>
-            </div>
-
-            <p class="no-button-hint" id="noButtonHint" aria-live="polite"></p>
-          </section>
-
-          <section class="screen" id="successScreen">
-            <div class="success-icon">
-              <span>💖</span>
-            </div>
-
-            <p class="eyebrow">Odpowiedź zapisana</p>
-
-            <h2>Wow, wybrałaś „Tak”?</h2>
-
-            <p class="description success-description">
-              Nie spodziewałem się 😅
-            </p>
-
-            <p class="description">
-              W takim razie musimy ustalić jeszcze kilka niezwykle ważnych
-              szczegółów.
-            </p>
-
-            <button class="primary-button" id="continueButton">
-              Kontynuuj
-              <span aria-hidden="true">→</span>
-            </button>
-          </section>
-
-          <section class="screen" id="placeholderScreen">
-            <div class="success-icon smaller">
-              <span>🕒</span>
-            </div>
-
-            <p class="eyebrow">Kolejny etap</p>
-
-            <h2>Teraz ustalimy godzinę wyjazdu</h2>
-
-            <p class="description">
-              Formularz wyboru godziny dodamy w następnym kroku.
-            </p>
-          </section>
-        </div>
-
-        <footer class="card-footer">
-          <span>Kod misji:</span>
-          <strong>LOVE-1907</strong>
-        </footer>
-      </section>
+            <footer class="card-footer">
+                <span>Kod misji:</span>
+                <strong>LOVE-1907</strong>
+            </footer>
+        </section>
     </main>
 
     <div class="confetti-container" id="confettiContainer"></div>
 
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
