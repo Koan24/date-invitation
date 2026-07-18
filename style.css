@@ -204,6 +204,38 @@ button {
   justify-content: center;
 }
 
+.starting-image {
+  position: relative;
+  z-index: 2;
+
+  width: 200px;
+  height: 200px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border: 8px solid rgba(255, 255, 255, 0.82);
+  border-radius: 50%;
+
+  box-shadow:
+    0 18px 42px rgba(154, 48, 87, 0.24),
+    0 0 0 1px rgba(200, 79, 124, 0.15);
+
+  animation: imageFloat 3s infinite ease-in-out;
+}
+
+@keyframes imageFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
 .illustration-glow {
   position: absolute;
 
@@ -216,61 +248,6 @@ button {
   filter: blur(24px);
 
   animation: glowPulse 3s infinite ease-in-out;
-}
-
-.envelope {
-  position: relative;
-  z-index: 2;
-
-  width: 132px;
-  height: 88px;
-
-  animation: envelopeFloat 3s infinite ease-in-out;
-}
-
-.envelope-back {
-  position: absolute;
-  inset: 0;
-
-  border-radius: 9px;
-
-  background: #df789d;
-  box-shadow: 0 15px 35px rgba(145, 47, 83, 0.25);
-}
-
-.letter {
-  position: absolute;
-  z-index: 2;
-
-  left: 16px;
-  right: 16px;
-  top: -32px;
-
-  height: 76px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 8px 8px 3px 3px;
-
-  background: #fffafc;
-  border: 1px solid rgba(200, 79, 124, 0.12);
-
-  font-size: 32px;
-
-  animation: letterMove 3s infinite ease-in-out;
-}
-
-.envelope-front {
-  position: absolute;
-  z-index: 3;
-
-  inset: 0;
-
-  overflow: hidden;
-
-  border-radius: 9px;
 }
 
 .envelope-front::before,
@@ -770,17 +747,6 @@ button:disabled {
   }
 }
 
-@keyframes letterMove {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
 @keyframes glowPulse {
   0%,
   100% {
@@ -867,10 +833,46 @@ button:disabled {
   }
 }
 
+.main-illustration.starting-illustration {
+  width: 130px;
+  height: 130px;
+  min-height: 130px;
+  margin-bottom: 30px;
+}
+
+.starting-illustration .illustration-glow {
+  width: 110px;
+  height: 110px;
+}
+
+.starting-image {
+  width: 120px;
+  height: 120px;
+
+  border-width: 6px;
+}
+
 @media (max-width: 650px) {
   .page-wrapper {
     padding: 15px;
     align-items: flex-start;
+  }
+
+  .main-illustration.starting-illustration {
+    width: 115px;
+    height: 115px;
+    min-height: 115px;
+    margin-bottom: 26px;
+  }
+
+  .starting-illustration .illustration-glow {
+    width: 95px;
+    height: 95px;
+  }
+
+  .starting-image {
+    width: 105px;
+    height: 105px;
   }
 
   .invitation-card {
